@@ -26,11 +26,11 @@ passport.use(
 								githubId: profile.id
 							},
 							(err, user) => {
-								return cb(null, user);
+								return cb(null, { ...user.toObject(), accessToken });
 							}
 						);
 					} else {
-						return cb(null, user);
+						return cb(null, { ...user.toObject(), accessToken });
 					}
 				}
 			);

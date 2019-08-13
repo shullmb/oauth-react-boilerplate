@@ -31,7 +31,11 @@ app.use(
 
 // configure passport middleware
 app.use(passport.initialize());
-app.use(passport.session);
+app.use(passport.session());
+
+import authRouter from "./controllers/auth";
+
+app.use("/auth", authRouter);
 
 app.get("*", (req, res) => {
 	res.sendFile("index.html");

@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"start": "tsc && nodemon build/server.js"
+		"prestart": "tsc && cd client && yarn build",
+		"start": "node build/server.js"
 	},
 	"author": "",
 	"license": "ISC",

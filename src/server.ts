@@ -34,8 +34,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 import authRouter from "./controllers/auth";
+import apiRouter from "./controllers/api";
 
 app.use("/auth", authRouter);
+app.use("/api", apiRouter);
 
 app.get("*", (req, res) => {
 	res.sendFile("index.html");

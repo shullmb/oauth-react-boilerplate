@@ -15,7 +15,7 @@ router.get(
 	(req, res) => {
 		// auth success!
 		console.log("this is the gh user:\n", req.user);
-		res.json({ user: req.user });
+		res.render("success", { user: req.user });
 	}
 );
 

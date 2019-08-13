@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 const userSchema = new Schema({
 	githubId: {
 		type: Number,
-		required: [true]
+		required: [true, "This is literally the only thing in this model"]
 	}
 });
 
